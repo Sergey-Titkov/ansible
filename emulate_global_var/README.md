@@ -3,7 +3,7 @@
 set_fact работает только для одного хоста и не может менять глобальные значения.
 
 Пример:
-
+```
 sergey@sergey-VirtualBox:~/mount/emulate_global_var$ ansible-playbook problem.yml --inventory-file=./inventory/test_inventoty/hosts -vvvvvv
 Using /home/sergey/mount/emulate_global_var/ansible.cfg as config file
 Loading callback plugin default of type stdout, v2.0 from /usr/lib/python2.7/dist-packages/ansible/plugins/callback/__init__.pyc
@@ -76,8 +76,9 @@ host_one                   : ok=2    changed=1    unreachable=0    failed=0
 host_two                   : ok=0    changed=0    unreachable=0    failed=1   
 
 sergey@sergey-VirtualBox:~/mount/emulate_global_var$ 
-
+```
 А очень хочется. Для решения проблемы создается псевдо хост, для хранения значений.
+```
 sergey@sergey-VirtualBox:~/mount/emulate_global_var$ ansible-playbook solve.yml --inventory-file=./inventory/test_inventoty/hosts -vvvvvv
 Using /home/sergey/mount/emulate_global_var/ansible.cfg as config file
 Loading callback plugin default of type stdout, v2.0 from /usr/lib/python2.7/dist-packages/ansible/plugins/callback/__init__.pyc
@@ -220,4 +221,4 @@ host_one                   : ok=1    changed=1    unreachable=0    failed=0
 host_two                   : ok=1    changed=1    unreachable=0    failed=0   
 
 sergey@sergey-VirtualBox:~/mount/emulate_global_var$ 
-
+```
