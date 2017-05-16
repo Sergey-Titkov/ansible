@@ -1,0 +1,6 @@
+---
+- name: "Set fact"
+  set_fact: one_fact="global value"
+
+- name: "Echo"
+  shell: echo ">""{{ one_fact }}""<"
