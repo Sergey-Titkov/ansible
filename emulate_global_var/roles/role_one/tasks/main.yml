@@ -1,0 +1,4 @@
+---
+# Обращение к переменной через массив
+- name: "Echo"
+  shell: echo ">""{{ hostvars['host_inventory']['one_fact'] }}""<"

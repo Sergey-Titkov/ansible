@@ -1,0 +1,18 @@
+---
+- name: "00"
+  hosts: host_inventory
+  gather_facts: False
+  roles:
+    - { role: role_invent }
+
+- name: "01"
+  hosts: host_group_one
+  gather_facts: False
+  roles:
+    - { role: role_one }
+
+- name: "02"
+  hosts: host_group_two
+  gather_facts: False
+  roles:
+    - { role: role_two }

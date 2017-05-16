@@ -1,0 +1,8 @@
+[host_inventories]
+host_inventory ansible_connection=local
+
+[host_group_one]
+host_one ansible_connection=local
+
+[host_group_two]
+host_two ansible_connection=local
