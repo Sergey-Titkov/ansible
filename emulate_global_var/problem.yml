@@ -1,0 +1,12 @@
+---
+- name: "01"
+  hosts: host_group_one
+  gather_facts: False
+  roles:
+    - { role: role_one_bad }
+
+- name: "02"
+  hosts: host_group_two
+  gather_facts: False
+  roles:
+    - { role: role_two_bad }
